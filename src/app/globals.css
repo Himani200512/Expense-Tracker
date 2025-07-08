@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root{
+  --background: #181818;
+  --neutral: #0212c2; 
+  --primary: #00bcd4;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: white;
+  font-size: 20px;
+}
+
+header {
+  display: flex;
+  background-color: var(--primary);
+  color: black;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.add-transaction {
+  background-color: var(--primary);
+  color: black;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+.add-transaction:hover {
+  background-color: var(--neutral);
+  color: white;
+}
+
+.clear-transaction {
+  background-color: var(--primary);
+  color: black;
+  padding: 5px 10px;
+  border-radius: 7px;
+}
+
+.clear-transaction:hover {
+  background-color: var(--neutral);
+  color: white;
+}
+
+h2 {
+  color: var(--primary);
+  font-size: 22px;
 }
