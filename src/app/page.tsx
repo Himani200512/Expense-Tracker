@@ -35,18 +35,24 @@ export default function Home() {
           <h1>Expense Tracker</h1>
         </div>
       </header>
-      <body>
-        <div className="center-container relative">
-          <Balance balance={balance} />
-          <h2>Transactions</h2> 
-          <TransactionList transactions={transactions} />
-          <AddTransaction onAdd={addTransaction} />
-          <button onClick={clearTransactions} className="clear-btn clear-transaction">
-            Clear All
-          </button>
-        </div>
-      </body>
+         <main className="flex flex-col items-center justify-center relative min-h-screen">
+      {/* Animated Math Background */}
       <AnimatedMathBackground />
-    </div>
-  );
+
+      {/* Main Content */}
+      <div className="center-container relative z-10 items-center justify-start">
+        <Balance balance={balance} />
+        <h2>Transactions</h2>
+        <TransactionList transactions={transactions} />
+        <AddTransaction onAdd={addTransaction} />
+        <button
+          onClick={clearTransactions}
+          className="clear-btn clear-transaction"
+        >
+          Clear All
+        </button>
+      </div>
+    </main>
+  </div>
+);
 }

@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 :root{
   --background: #181818;
@@ -22,7 +26,6 @@ header {
   justify-content: center;
   font-size: 40px;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  margin-bottom: 18px;
 }
 
 .add-transaction {
