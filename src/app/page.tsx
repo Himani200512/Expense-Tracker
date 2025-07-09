@@ -40,7 +40,7 @@ export default function Home() {
       <AnimatedMathBackground />
 
       {/* Main Content */}
-      <div className="center-container relative z-10 items-center justify-start">
+      <div className="flex-1 flex flex-col center-container relative z-10 items-center justify-start">
         <Balance balance={balance} />
         <h2>Transactions</h2>
         <TransactionList transactions={transactions} />
