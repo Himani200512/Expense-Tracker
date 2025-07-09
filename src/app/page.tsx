@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
-import Header from "./components/header";
 import Balance from "./components/balance";
 import TransactionList from "./components/TransactionList";
 import AddTransaction from "./components/AddTransaction";
+import AnimatedMathBackground from "./components/animatedBG";
 
 type Transaction = {
   id: number;
@@ -30,14 +30,23 @@ export default function Home() {
 
   return (
     <div>
-      <Header />
-      <Balance balance={balance} />
-      <h2>Transactions</h2> 
-      <TransactionList transactions={transactions} />
-      <AddTransaction onAdd={addTransaction} />
-      <button onClick={clearTransactions} className="clear-btn clear-transaction">
-        Clear All
-      </button>
+      <header>
+        <div className="center-container">
+          <h1>Expense Tracker</h1>
+        </div>
+      </header>
+      <body>
+        <div className="center-container relative">
+          <Balance balance={balance} />
+          <h2>Transactions</h2> 
+          <TransactionList transactions={transactions} />
+          <AddTransaction onAdd={addTransaction} />
+          <button onClick={clearTransactions} className="clear-btn clear-transaction">
+            Clear All
+          </button>
+        </div>
+      </body>
+      <AnimatedMathBackground />
     </div>
   );
 }

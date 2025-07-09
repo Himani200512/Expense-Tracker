@@ -25,6 +25,7 @@ const AddTransaction = ({ onAdd }: AddTransactionProps) => {
         placeholder="Description"
         onChange={e => setText(e.target.value)}
         required
+        className="border border-gray-300 rounded p-2 mr-1 mt-3"
       />
       <input
         type="number"
@@ -33,8 +34,9 @@ const AddTransaction = ({ onAdd }: AddTransactionProps) => {
         placeholder="Amount"
         onChange={e => setAmount(e.target.value)}
         required
+        className="border border-gray-300 rounded p-2 mt-3 ml-1"
       />
-      <button type="submit" className="add-transaction">Add Transaction</button>
+        <button type="submit" className="add-transaction mb-3 mt-3 ml-2">Add Transaction</button>
     </form>
   );
 };

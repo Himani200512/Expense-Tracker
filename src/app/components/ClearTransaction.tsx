@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import Header from "../components/header";
 import Balance from "../components/balance";
 import TransactionList from "../components/TransactionList";
 import AddTransaction from "../components/AddTransaction";
