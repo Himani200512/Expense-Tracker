@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <Balance balance={balance} />
+      <Balance balance={balance} className="align-centre" />
       <h2>Transactions</h2> 
       <TransactionList transactions={transactions} />
       <AddTransaction onAdd={addTransaction} />
