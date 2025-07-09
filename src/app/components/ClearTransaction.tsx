@@ -1,9 +1,6 @@
 "use client";
 import React from "react";
 import { useState } from "react";
-import Balance from "../components/balance";
-import TransactionList from "../components/TransactionList";
-import AddTransaction from "../components/AddTransaction";
 
 
 type Transaction = {
@@ -25,8 +22,6 @@ export default function Home() {
   const clearTransactions = () => {
     setTransactions([]);
   };
-
-  const balance = transactions.reduce((acc, tx) => acc + tx.amount, 0);
 
   return (
       <div className="flex justify-between items-center max-w-[400px] mx-auto mb-4">
