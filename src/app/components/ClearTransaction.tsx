@@ -11,14 +11,6 @@ type Transaction = {
 
 export default function Home() {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
-
-  const addTransaction = (tx: { text: string; amount: number }) => {
-    setTransactions([
-      ...transactions,
-      { id: Date.now(), ...tx },
-    ]);
-  };
-
   const clearTransactions = () => {
     setTransactions([]);
   };
